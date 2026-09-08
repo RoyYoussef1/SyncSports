@@ -6,7 +6,7 @@
     <title>SYNC Sports</title>
     <meta
       name="description"
-      content="Organised padel games and tournaments in Dubai. Join individually or with a partner, choose social formats or competitive tournaments, and hear about everything first through the SYNC WhatsApp Community."
+      content="Sports made social. Play, compete and meet people through SYNC — social games, tournaments, leagues and championships. Join the SYNC Community."
     />
     <link rel="canonical" href="https://www.syncsports.ae/" />
     <meta property="og:type" content="website" />
@@ -14,7 +14,7 @@
     <meta property="og:title" content="SYNC Sports — Sports made social." />
     <meta
       property="og:description"
-      content="Organised padel games and tournaments in Dubai. Join the game, even if you don't already have the group."
+      content="More than just a game. It's a community. Join the SYNC Community."
     />
     <meta
       property="og:image"
@@ -269,7 +269,7 @@
         background: #0E0C0D;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        padding: 6px 16px;
+        padding: 12px 16px;
       }
       @media (max-width: 900px) {
         .header__pill {
@@ -281,8 +281,9 @@
         line-height: 0;
       }
       .brand img {
-        max-width: 70px;
-        border-radius: 8px;
+        height: 54px;
+        width: auto;
+        max-width: 170px;
       }
       .nav {
         display: none;
@@ -382,12 +383,26 @@
         position: relative;
         isolation: isolate;
         background: var(--black);
+        overflow: hidden;
+      }
+      .hero__media {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+      }
+      .hero__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(0.55) brightness(0.62) contrast(1.05);
       }
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        z-index: -2;
+        z-index: -3;
         background-image: var(--hero-img);
         background-size: cover;
         background-position: center 38%;
@@ -412,9 +427,14 @@
             transparent 100%
           );
       }
+      @media (prefers-reduced-motion: reduce) {
+        .hero__media {
+          display: none;
+        }
+      }
       .hero__in {
         padding-block: 8.5rem 3rem;
-        min-height: 88vh;
+        min-height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -431,7 +451,7 @@
         font-size: clamp(2.6rem, 10.5vw, 5.2rem);
         line-height: 0.9;
         color: #fff;
-        max-width: 17ch;
+        max-width: 20ch;
         margin-bottom: 1.5rem;
       }
       .hero__rule {
@@ -603,6 +623,45 @@
         color: var(--muted);
         flex: 1;
         margin: 0;
+      }
+      .format__line {
+        color: var(--ink) !important;
+        font-weight: 600;
+        margin-bottom: 0.35rem !important;
+        flex: none !important;
+      }
+      .section-cta {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .section-cta__prompt {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .section-cta .btn {
+        width: auto;
+      }
+      .section-cta--row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      @media (max-width: 768px) {
+        .section-cta {
+          align-items: center;
+          text-align: center;
+        }
+        .section-cta .btn {
+          width: 100%;
+        }
+        .section-cta--row {
+          flex-direction: column;
+        }
       }
       .tag {
         display: inline-block;
@@ -1012,7 +1071,9 @@
         gap: 2rem;
       }
       .footer img {
+        height: 60px;
         width: auto;
+        max-width: 200px;
       }
       @media (max-width: 640px) {
         .footer img {
@@ -1107,7 +1168,7 @@
       @media (max-width: 768px) {
         .footer {
           text-align: center;
-          padding-top: 24px; 
+          padding-top: 32px; 
         }
       }
 
@@ -1158,14 +1219,14 @@
         <div class="header__pill">
           <a class="brand" href="#top">
             <img
-              src="assets/logo1.png"
+              src="assets/SYNC_Sports_Logo_Enhanced_Transparent_CROPPED.png"
               alt="SYNC Sports"
             />
           </a>
           <nav class="nav">
             <a href="#about">About</a>
             <a href="#formats">Formats</a>
-            <a href="#how">How it works</a>
+            <a href="#join">Join</a>
             <a href="#activities">What's on</a>
           </nav>
           <div class="social">
@@ -1224,21 +1285,38 @@
 
     <main id="main">
       <section class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <video
+            class="hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80"
+          >
+            <source
+              src="https://assets.mixkit.co/videos/869/869-720.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
         <div class="wrap hero__in">
           <p class="hero__tag">Sports made social.</p>
-          <h1>Join the game, even if you don't already have the group.</h1>
+          <h1>More than just a game. It's a community.</h1>
           <div class="hero__rule" aria-hidden="true"></div>
           <div class="hero__foot">
             <p>
-              Organised academy in Dubai. Social games you can enter on your
-              own, and tournaments when you want to compete.
+              Play. Compete. Meet people.<br />
+              From social games and tournaments to leagues and championships,
+              SYNC brings people together through sport.
             </p>
             <div class="hero__actions">
               <a class="btn btn--gold btn--wide" data-wa="hero-primary" href="#"
-                >View upcoming games</a
+                >JOIN THE COMMUNITY</a
               >
               <a class="btn btn--onDark btn--wide" href="#activities"
-                >See what's on</a
+                >SEE WHAT'S ON</a
               >
             </div>
           </div>
@@ -1249,16 +1327,15 @@
         <div class="wrap">
           <div class="splithead">
             <div>
-              <p class="eyebrow">What is SYNC?</p>
+              <p class="eyebrow">This is SYNC</p>
               <h2 class="h2">
-                Organised Academy. A community worth returning to.
+                Good games. Good people. Real competition.
               </h2>
             </div>
             <p class="lede">
-              SYNC Sports creates organised sports experiences designed to make
-              playing more social, accessible and community-led. Padel is the
-              current entry sport, with formats that let you compete, meet other
-              players and take part without needing an established circle.
+              We make it easy to get in the game. <br>Come on your own, bring a
+              partner or get your team together. Pick the format that suits you,
+              play at your level and become part of the community.
             </p>
           </div>
 
@@ -1269,7 +1346,7 @@
               width="900"
               height="700"
               src="https://images.unsplash.com/flagged/photo-1576972405668-2d020a01cbfa?fm=jpg&q=75&w=1000&auto=format&fit=crop"
-              alt="Placeholder — four players in a doubles padel match"
+              alt="Players competing in a doubles match"
             />
             <div class="collage__right">
               <img
@@ -1278,23 +1355,21 @@
                 width="900"
                 height="506"
                 src="https://images.unsplash.com/photo-1646649853703-7645147474ba?fm=jpg&q=75&w=1000&auto=format&fit=crop"
-                alt="Placeholder — padel rackets and balls on a blue court"
+                alt="Rackets and balls on court"
               />
               <div class="collage__cards">
                 <div class="minicard">
-                  <h3>Properly run</h3>
+                  <h3>Play at your level</h3>
                   <p>
-                    Reliable scheduling, quality venues, structured formats and
-                    consistent communication. Our first tournament has already
-                    been delivered, and the calendar is building from there.
+                    Real competition without the intimidation — matched so the
+                    game stays sharp and inviting.
                   </p>
                 </div>
                 <div class="minicard">
-                  <h3>Inclusive competition</h3>
+                  <h3>Easy to join</h3>
                   <p>
-                    Competitive enough to be exciting, welcoming enough to take
-                    part confidently. Matches are balanced by level, so nobody
-                    is out of their depth or short of a game.
+                    Come alone, bring a partner or get your team together. Pick
+                    the format that fits and get in the game.
                   </p>
                 </div>
               </div>
@@ -1305,17 +1380,15 @@
 
       <section class="section" id="formats" style="background: var(--card-alt)">
         <div class="wrap">
-          <div class="splithead splithead--action">
+          <div class="splithead">
             <div>
               <p class="eyebrow">Choose how you play</p>
-              <h2 class="h2">
-                Social games when you want to play. Tournaments when you want to
-                compete.
-              </h2>
+              <h2 class="h2">Find your fit</h2>
             </div>
-            <a class="btn btn--dark" data-wa="formats-help" href="#"
-              >Ask which format suits you</a
-            >
+            <p class="lede">
+              Social games, tournaments, SYNC Her, or leagues and championships —
+              pick the format that suits you.
+            </p>
           </div>
 
           <div class="formats">
@@ -1326,14 +1399,15 @@
                 width="800"
                 height="500"
                 src="https://images.unsplash.com/photo-1646649851800-48dba35edc76?fm=jpg&q=75&w=900&auto=format&fit=crop"
-                alt="Placeholder — a player on a padel court mid-point"
+                alt="Player mid-rally in a social game"
               />
               <div class="format__body">
                 <h3>Social games</h3>
+                <p class="format__line">Show up. Mix in. Play.</p>
                 <p>
-                  Join individually without a fixed partner. Players rotate
-                  through the session, so the play stays balanced and organised
-                  from the first match to the last.
+                  Join on your own and play with different partners and
+                  opponents. Meet new players without having to organise the
+                  game yourself.
                 </p>
                 <span class="tag">No partner needed</span>
               </div>
@@ -1346,14 +1420,15 @@
                 width="800"
                 height="500"
                 src="https://images.unsplash.com/photo-1612534847738-b3af9bc31f0c?fm=jpg&q=75&w=900&auto=format&fit=crop"
-                alt="Placeholder — a player with a padel racket on court"
+                alt="Player ready to compete"
               />
               <div class="format__body">
                 <h3>Tournaments</h3>
+                <p class="format__line">Bring your partner. Bring your game.</p>
                 <p>
-                  Register with your own partner, or contact SYNC for matching
-                  support. Structured competition, run to a standard that holds
-                  up beyond the scoreline.
+                  Compete against players at your level in structured
+                  tournaments with prizes and plenty to play for. Need a
+                  partner? We can help you find one.
                 </p>
                 <span class="tag">Pairs, matching available</span>
               </div>
@@ -1366,14 +1441,14 @@
                 width="800"
                 height="500"
                 src="https://images.unsplash.com/photo-1545151414-8a948e1ea54f?fm=jpg&q=75&w=900&auto=format&fit=crop"
-                alt="Placeholder — a woman playing on a padel court"
+                alt="Woman competing on court"
               />
               <div class="format__body">
                 <h3>SYNC Her</h3>
+                <p class="format__line">Her game. Her community.</p>
                 <p>
-                  Female-only social games and tournaments, with the same
-                  organisation and quality of play as every other SYNC format,
-                  and the choice to play socially or competitively.
+                  Ladies-only social games and tournaments. Play regularly,
+                  compete and meet more women through sport.
                 </p>
                 <span class="tag tag--pink">Women only</span>
               </div>
@@ -1386,18 +1461,26 @@
                 width="800"
                 height="500"
                 src="https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?fm=jpg&q=75&w=900&auto=format&fit=crop"
-                alt="Placeholder — padel rackets and balls laid out on court"
+                alt="Court ready for competition"
               />
               <div class="format__body">
                 <h3>Leagues &amp; championships</h3>
+                <p class="format__line">Represent. Compete. Win.</p>
                 <p>
-                  Recurring, corporate and industry-based padel competitions,
-                  including the Hospitality Championship. Team participation,
-                  recognition and season-long engagement.
+                  Leagues and championships bringing communities, companies and
+                  industries head-to-head. Industry-level championships and more
+                  formats are coming soon.
                 </p>
                 <span class="tag tag--muted">Teams and companies</span>
               </div>
             </article>
+          </div>
+
+          <div class="section-cta">
+            <p class="section-cta__prompt">Ready to get in the game?</p>
+            <a class="btn btn--dark" data-wa="formats-cta" href="#"
+              >JOIN THE SYNC COMMUNITY</a
+            >
           </div>
         </div>
       </section>
@@ -1406,117 +1489,48 @@
         <div class="wrap">
           <div class="splithead">
             <div>
-              <p class="eyebrow">First tournament</p>
+              <p class="eyebrow">Show the experience</p>
               <h2 class="h2">Play first. The connection happens naturally.</h2>
             </div>
             <p class="lede">
-              Our first tournament has already run. This is what a SYNC event
-              actually looks like.
+              The competition gets you on court.<br />
+              The people make you want to come back.
             </p>
           </div>
           <button
             class="video"
             id="video-btn"
             type="button"
-            aria-label="Play the SYNC Sports first tournament video"
+            aria-label="Play the SYNC Sports tournament video"
           >
             <span class="video__play" aria-hidden="true"
               ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
             ></span>
           </button>
-        </div>
-      </section>
-
-      <section class="section" id="how" style="background: var(--card-alt)">
-        <div class="wrap">
-          <div class="splithead">
-            <div>
-              <p class="eyebrow">How it works</p>
-              <h2 class="h2">From finding an activity to joining the group</h2>
-            </div>
-            <p class="lede">
-              No account and no long form. A short WhatsApp conversation is the
-              whole process.
+          <div class="section-cta">
+            <p class="section-cta__prompt">
+              This is what Sports Made Social looks like.
             </p>
+            <a class="btn btn--dark" data-wa="video-cta" href="#"
+              >JOIN THE COMMUNITY</a
+            >
           </div>
-
-          <ol class="steps">
-            <li class="step">
-              <div class="step__top">
-                <span class="tile" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <rect x="3" y="4.5" width="18" height="16" rx="2" />
-                    <path d="M3 9.5h18M8 2.5v4M16 2.5v4" />
-                    <path
-                      d="M11.5 14.5a2.5 2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0M18.2 16.2l1.6 1.6"
-                    />
-                  </svg>
-                </span>
-                <span class="num" aria-hidden="true">01</span>
-              </div>
-              <h3>Find an activity</h3>
-              <p>
-                Look through what's coming up below. Each activity shows the
-                format, date, venue, playing level and price, so you can tell at
-                a glance which one suits you.
-              </p>
-            </li>
-
-            <li class="step">
-              <div class="step__top">
-                <span class="tile" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M20.5 12.5a6.5 6.5 0 0 1-6.5 6.5H9.2L5 22v-3.9A6.5 6.5 0 0 1 3.5 13.8v-3.3A6.5 6.5 0 0 1 10 4h4a6.5 6.5 0 0 1 6.5 6.5z"
-                    />
-                    <path d="M8.5 10.5h7M8.5 14h4" />
-                  </svg>
-                </span>
-                <span class="num" aria-hidden="true">02</span>
-              </div>
-              <h3>Tell us what suits you</h3>
-              <p>
-                Tournaments, social games, female-only formats or general
-                updates. We'll ask only what's needed: Name, playing level,
-                preferred area, and whether you have a partner.
-              </p>
-            </li>
-
-            <li class="step">
-              <div class="step__top">
-                <span class="tile" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="8.5" cy="8.5" r="2.9" />
-                    <circle cx="16.8" cy="9.6" r="2.4" />
-                    <path d="M3.2 19.2c0-2.9 2.4-4.8 5.3-4.8s5.3 1.9 5.3 4.8" />
-                    <path d="M15.1 14.7c2.6.2 4.7 2 4.7 4.5" />
-                  </svg>
-                </span>
-                <span class="num" aria-hidden="true">03</span>
-              </div>
-              <h3>Get your spot and join the group</h3>
-              <p>
-                We confirm the activity that matches, sort partner matching if
-                you need it, and add you to the SYNC Community so you hear about
-                the next one first.
-              </p>
-            </li>
-          </ol>
         </div>
       </section>
 
-      <section class="section" id="why">
+      <section class="section" id="join" style="background: var(--card-alt)">
         <div class="wrap">
           <div class="splithead">
             <div>
-              <p class="eyebrow">Why join</p>
+              <p class="eyebrow">No group required</p>
               <h2 class="h2">
-                Organised experiences, without the coordination
+                Come alone. Bring a partner. Build your circle.
               </h2>
             </div>
             <p class="lede">
-              Most players arrive because the games are well run. They stay
-              because the group is worth coming back to.
+              You don't need an existing group to be part of SYNC. <br>Join a social
+              game on your own, bring a partner to a tournament or find players
+              at your level through the community.
             </p>
           </div>
 
@@ -1527,24 +1541,9 @@
               width="800"
               height="900"
               src="https://images.unsplash.com/photo-1545809074-59472b3f5ecc?fm=jpg&q=75&w=900&auto=format&fit=crop"
-              alt="Placeholder — a player holding a padel racket and ball"
+              alt="Player ready to join the next game"
             />
             <ul class="benefits">
-              <li class="benefit">
-                <span class="tile" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="8.5" />
-                    <path d="M12 7v5l3.2 2" />
-                  </svg>
-                </span>
-                <div>
-                  <h3>Properly organised</h3>
-                  <p>
-                    Reliable scheduling, quality venues and structured formats
-                    that start and finish when they say they will.
-                  </p>
-                </div>
-              </li>
               <li class="benefit">
                 <span class="tile" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
@@ -1554,10 +1553,9 @@
                   </svg>
                 </span>
                 <div>
-                  <h3>Easier participation</h3>
+                  <h3>Come alone</h3>
                   <p>
-                    You don't need an existing group or a regular partner. Enter
-                    on your own and the format handles the rest.
+                    Join a social game on your own. No existing group required.
                   </p>
                 </div>
               </li>
@@ -1572,10 +1570,10 @@
                   </svg>
                 </span>
                 <div>
-                  <h3>Partner options</h3>
+                  <h3>Bring a partner</h3>
                   <p>
-                    Register with your own partner for tournaments, or ask SYNC
-                    for matching support at a similar level.
+                    Enter a tournament together, or ask SYNC to help you find
+                    one at your level.
                   </p>
                 </div>
               </li>
@@ -1589,32 +1587,30 @@
                   </svg>
                 </span>
                 <div>
-                  <h3>Community access</h3>
+                  <h3>Build your circle</h3>
                   <p>
-                    The WhatsApp Community is the easiest way to hear about
-                    upcoming activities, and the first place they're announced.
+                    Your next game could start with someone you haven't met yet.
                   </p>
                 </div>
               </li>
             </ul>
           </div>
+
+          <div class="section-cta">
+            <a class="btn btn--dark" data-wa="join-barrier" href="#"
+              >JOIN THE COMMUNITY</a
+            >
+          </div>
         </div>
       </section>
 
-      <section
-        class="section"
-        id="activities"
-        style="background: var(--card-alt)"
-      >
+      <section class="section" id="activities">
         <div class="wrap">
-          <div class="splithead splithead--action">
+          <div class="splithead">
             <div>
-              <p class="eyebrow">Upcoming activities</p>
-              <h2 class="h2">Play hard. Socialize easy.</h2>
+              <p class="eyebrow">What's on</p>
+              <h2 class="h2">Ready to play?</h2>
             </div>
-            <a class="btn btn--dark" data-wa="activities-full-list" href="#"
-              >See the full list</a
-            >
           </div>
 
           <ul class="board">
@@ -1666,15 +1662,15 @@
                       <circle cx="8" cy="8" r="1.2" />
                     </svg>
                     <div>
-                      <dt>Price</dt>
-                      <dd>To confirm</dd>
+                      <dt>Format</dt>
+                      <dd>Social games</dd>
                     </div>
                   </div>
                 </dl>
               </div>
               <div class="fixture__action">
                 <a class="btn btn--line" data-wa="fixture-social-11sep" href="#"
-                  >Register interest</a
+                  >JOIN THE COMMUNITY</a
                 >
               </div>
             </li>
@@ -1727,15 +1723,15 @@
                       <circle cx="8" cy="8" r="1.2" />
                     </svg>
                     <div>
-                      <dt>Price</dt>
-                      <dd>To confirm</dd>
+                      <dt>Format</dt>
+                      <dd>SYNC Her</dd>
                     </div>
                   </div>
                 </dl>
               </div>
               <div class="fixture__action">
                 <a class="btn btn--pink" data-wa="fixture-her-13sep" href="#"
-                  >Register interest</a
+                  >JOIN THE COMMUNITY</a
                 >
               </div>
             </li>
@@ -1788,8 +1784,8 @@
                       <circle cx="8" cy="8" r="1.2" />
                     </svg>
                     <div>
-                      <dt>Price</dt>
-                      <dd>To confirm</dd>
+                      <dt>Format</dt>
+                      <dd>Tournament</dd>
                     </div>
                   </div>
                 </dl>
@@ -1799,124 +1795,45 @@
                   class="btn btn--line"
                   data-wa="fixture-tournament-20sep"
                   href="#"
-                  >Register interest</a
-                >
-                <a
-                  class="btn btn--line"
-                  data-wa="partner-matching-20sep"
-                  href="#"
-                  >Ask about partner matching</a
-                >
-              </div>
-            </li>
-
-            <li class="fixture">
-              <div class="fixture__date">
-                <span class="fixture__dow">Tue</span>
-                <span class="fixture__day">30</span>
-                <span class="fixture__mon">Sep</span>
-              </div>
-              <div>
-                <h3 class="fixture__title">
-                  Hospitality Championship — corporate
-                </h3>
-                <dl class="fixture__meta">
-                  <div>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <circle cx="12" cy="12" r="8.5" />
-                      <path d="M12 7v5l3.2 2" />
-                    </svg>
-                    <div>
-                      <dt>Time</dt>
-                      <dd>To confirm</dd>
-                    </div>
-                  </div>
-                  <div>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M12 21.5s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"
-                      />
-                      <circle cx="12" cy="10.5" r="2.5" />
-                    </svg>
-                    <div>
-                      <dt>Venue</dt>
-                      <dd>To confirm</dd>
-                    </div>
-                  </div>
-                  <div>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 20V13M12 20V7M19 20v-9" />
-                    </svg>
-                    <div>
-                      <dt>Format</dt>
-                      <dd>Company teams</dd>
-                    </div>
-                  </div>
-                  <div>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M20.5 12.5 12.8 20.2a2 2 0 0 1-2.8 0l-6.2-6.2a2 2 0 0 1-.6-1.4V5a1.5 1.5 0 0 1 1.5-1.5h7.6a2 2 0 0 1 1.4.6l6.8 6.8a1.8 1.8 0 0 1 0 2.6Z"
-                      />
-                      <circle cx="8" cy="8" r="1.2" />
-                    </svg>
-                    <div>
-                      <dt>Price</dt>
-                      <dd>On request</dd>
-                    </div>
-                  </div>
-                </dl>
-              </div>
-              <div class="fixture__action">
-                <a
-                  class="btn btn--line"
-                  data-wa="fixture-corporate-30sep"
-                  href="#"
-                  >Enter a team</a
+                  >JOIN THE COMMUNITY</a
                 >
               </div>
             </li>
           </ul>
-        </div>
-      </section>
 
-      <section class="band" id="community">
-        <div class="wrap band__in">
-          <p class="tagline">Strangers that feel familiar.</p>
-          <h2>The SYNC WhatsApp Community</h2>
-          <p>
-            Upcoming games and tournaments are available through the SYNC
-            WhatsApp Community. It's the easiest way to hear about activities,
-            and where everything is announced first.
-          </p>
-          <ul class="perks">
-            <li>
-              New social games, tournaments and female-only formats before they
-              go public
-            </li>
-            <li>Partner matching for pairs events and tournaments</li>
-            <li>Results, photography and video after each event</li>
-            <li>
-              First access to leagues, corporate and hospitality competitions
-            </li>
-          </ul>
-          <div class="band__actions">
-            <a class="btn btn--gold btn--wide" data-community href="#"
-              >Join the SYNC Community</a
+          <div class="section-cta section-cta--row">
+            <a class="btn btn--dark" data-community href="#"
+              >SEE ALL UPCOMING GAMES</a
+            >
+            <a class="btn btn--line" data-wa="activities-join" href="#"
+              >JOIN THE COMMUNITY FOR NEW GAMES</a
             >
           </div>
         </div>
       </section>
 
-      <section class="final">
-        <div class="wrap">
-          <h2>Come and play</h2>
+      <section class="band" id="community">
+        <div class="wrap band__in">
+          <p class="tagline">The game is just the start.</p>
+          <h2>Join the SYNC Community</h2>
           <p>
-            Send one message and we'll tell you which activities are open, what
-            level they suit, and how to take a spot.
+            Find upcoming games. Meet players at your level. Find a partner.
+            Compete. Stay connected.
           </p>
-          <a class="btn btn--gold" data-wa="final-cta" href="#"
-            >View upcoming games</a
-          >
+          <p>More than just a game. It's a community.</p>
+          <ul class="perks">
+            <li>New games</li>
+            <li>Tournaments</li>
+            <li>Partner matching</li>
+            <li>SYNC Her</li>
+            <li>Championships</li>
+            <li>Community updates</li>
+          </ul>
+          <div class="band__actions">
+            <a class="btn btn--gold btn--wide" data-community href="#"
+              >JOIN THE SYNC COMMUNITY</a
+            >
+          </div>
         </div>
       </section>
     </main>
@@ -1926,17 +1843,17 @@
         <div class="footer__in">
           <div>
             <img
-              src="assets/logo1.png"
+              src="assets/SYNC_Sports_Logo_Enhanced_Transparent_CROPPED.png"
               alt="SYNC Sports"
             />
           </div>
           <div>
             <h4>Explore</h4>
             <ul>
-              <li><a href="#about">What is SYNC</a></li>
+              <li><a href="#about">This is SYNC</a></li>
               <li><a href="#formats">Choose how you play</a></li>
-              <li><a href="#how">How it works</a></li>
-              <li><a href="#activities">Upcoming activities</a></li>
+              <li><a href="#join">Come alone</a></li>
+              <li><a href="#activities">What's on</a></li>
             </ul>
           </div>
           <div class="footer__touch">
